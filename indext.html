@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Specioza chelangat</h1>
+            <p>Data Analyst</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Hello! I'm Specioza chelangat, a passionate data analyst with a knack for uncovering insights from data. With a background in statistics and Engineering in Electronics and computer science, I specialize in data visualization, predictive analytics, and machine learning.</p>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+           
+            <li>SQL</li>
+
+          
+            <li>Machine Learning</li>
+            <li>Data Visualization</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1: Population Analysis</h3>
+            <p>Conducted a comprehensive population analysis in relationship to rainfall and temperature for specific districts in uganda , identifying key trends and visualizing it.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2:  Segmentation of cells affected by sickle cell</h3>
+            <p>Developed  segmentation model using Artificial Nueral Networks to  help doctors in hospitals find the exact part affected by sickle cell disease  given the ground truth.</p>
+        </div>
+        <div class="project">
+            <h3>Project 3: Weather predictions</h3>
+            <p>Created a predictive maintenance model for weather forecasting in uganda using machine learning algorithms.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out to me at:</p>
+        <p>Email:speciozachelangat@gmail.com</p>
+        
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 specioza Chelangat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
